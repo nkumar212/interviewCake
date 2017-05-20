@@ -1,60 +1,35 @@
 #include <iostream>
+#include <string>
 #include <vector>
 #include <algorithm>
+#include <sstream>
+#include "functions.h"
+
 
 int main()
 {
 
+
+	std::vector<Meeting> mergedList;
+	std::vector<Meeting> meetingList;
+
+	meetingList.push_back(Meeting(0,1));
+	meetingList.push_back(Meeting(3,5));	
+	meetingList.push_back(Meeting(4,8));	
+	meetingList.push_back(Meeting(10,12));	
+	meetingList.push_back(Meeting(9,10));	
+
+	mergedList = mergeRanges(meetingList);
+
+	std::cout << "[";
+
+	for(size_t i = 0; i < (mergedList.size() -1) ; i++)
+	{
+
+		std::cout << "Meeting(" << std::to_string(mergedList[i].getStartTime()) << "," << std::to_string(mergedList[i].getEndTime()) << ") , ";
+	}
 	
+	std::cout << "Meeting(" << std::to_string(mergedList[(mergedList.size()-1)].getStartTime()) << "," << std::to_string(mergedList[(mergedList.size()-1)].getEndTime()) << ")]\n";
 
 }
 
-
-class Meeting
-{
-	private:
-
-		unsigned int startTime_;
-		unsigned int endTime_;
-
-	publid:
-		
-		Meeting() :
-		
-			startTime_(0),
-			endTime_(0)
-			{}
-
-		Meeting(unsigned int startTime, unsigned int endTime) :
-
-			startTime_(startTime),
-			endTime_(endTime)
-			{}
-
-		unsigned int getStartTime() const
-		{
-			return startTime_;
-		}
-
-		void setStartTime(unsigned int startTime)
-		{
-			startTime_ = startTime;
-		}
-
-		unsigned int getEndTime() const
-		{
-			return endTime_;
-		}
-
-		void setEndTime(unsigned int endTime)
-		{
-			endTime_ = endTime;
-		}
-
-		bool operator==(const Meeting& other) const
-		{
-			return
-				startTime_ == other.startTime_ && endTime_ == other.endTime_;
-			
-		}
-}	
