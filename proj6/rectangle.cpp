@@ -41,12 +41,8 @@ int Rectangle::getHeight(void) const
 	return height_;
 }
 
-void Rectangle::printRectangle(Rectangle rect)
-{
 
-	std::cout << "Rectangle(" << std::to_string(rect.getLeftX()) << "," << std::to_string(rect.getBottomY()) << "," << std::to_string(rect.getWidth()) << "," << std::to_string(rect.getHeight()) << ")\n";
 
-}
 
 bool Rectangle::operator==(const Rectangle& other) const
 {

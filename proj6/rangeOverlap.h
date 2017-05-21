@@ -13,8 +13,8 @@ class RangeOverlap
 		
 		int getStartPoint(void) const;
 		int getLength(void) const;
-		bool operator==(const RangeOverlap& other) const;
-		bool operator!=(const RangeOverlap& other) const;
+		bool operator==(const RangeOverlap& other);
+		bool operator!=(const RangeOverlap& other);
 };
 
 #endif

@@ -18,7 +18,6 @@ class Rectangle
 		int getBottomY(void) const;
 		int getWidth(void) const;
 		int getHeight(void) const;
-		void printRectangle(Rectangle rect);
 		bool operator==(const Rectangle& other) const;
 		bool operator!=(const Rectangle& other) const;
 };

@@ -11,6 +11,9 @@ int main()
 
 	Rectangle sol = findIntersection(r2, r1);
 
+		
+	std::cout << "Rectangle(" << std::to_string(sol.getLeftX()) << "," << std::to_string(sol.getBottomY()) << "," << std::to_string(sol.getWidth()) << "," << std::to_string(sol.getHeight()) << ")\n";
+
 
 
 }
